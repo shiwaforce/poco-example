@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  sfnginx:
+    image: nginx:alpine
+    volumes:
+      - ${config_location}:/etc/nginx/nginx.conf:ro
+      - ${static_dir}:/var/www
+    ports: 
+      - 80:80

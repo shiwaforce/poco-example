@@ -1,0 +1,5 @@
+version: '2.0'
+maintainer: "operation@shiwaforce.com"
+
+mode:
+    default:    docker-compose.yml

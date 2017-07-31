@@ -2,10 +2,12 @@ example-voting-app:
   file: example-voting-app/project-compose.yml
   git: https://github.com/shiwaforce/project-compose-example.git
   repository_dir: project-compose-example
+
 nginx:
   file: nginx/project-compose.yml
   git: https://github.com/shiwaforce/project-compose-example.git
   repository_dir: project-compose-example
+  
 mysql:
   file: mysql/project-compose.yml
   git: https://github.com/shiwaforce/project-compose-example.git

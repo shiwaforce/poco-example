@@ -7,14 +7,5 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: pass123
       MYSQL_DATABASE: test
-      MYSQL_USER: sfadmin
-      MYSQL_PASSWORD: pass42
-
-  phpmyadmin:
-    environment:
-      PMA_HOST: mysql
-    image: phpmyadmin/phpmyadmin
-    links:
-    - mysql
-    ports:
-    - 3000:80
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: pass456

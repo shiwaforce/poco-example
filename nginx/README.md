@@ -28,28 +28,22 @@ Quick start
 2. List all projects in the catalogue and list all available modes of the example voting app:
 	```shell
 	$ project-catalog ls
-	nginx
-	example-voting-app
-	mysql
-	
-	$ project-compose mode ls example-voting-app
-    default
-    javaworker
-    simple
+	default
+	demo/hello
 	```
     
 3. Start and stop the Docker example voting app in default mode:
 	```sh
-	$ project-compose start example-voting-app
+	$ project-compose start nginx
 	...
-	$ project-compose down example-voting-app 
+	$ project-compose down nginx
 	```
     
 4. Start and stop the Docker example voting app in javaworker mode:
 	```shell
-	$ project-compose start example-voting-app javaworker
+	$ project-compose start nginx demo/hello
 	...
-	$ project-compose down example-voting-app javaworker
+	$ project-compose down nginx demo/hello
 	```
 Other examples
 ----------------

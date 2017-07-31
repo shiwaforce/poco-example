@@ -3,3 +3,6 @@ maintainer: "operation@shiwaforce.com"
 
 mode:
     default:    docker-compose.yml
+    dev/with-phpmyadmin:
+        - docker-compose.yml
+        - docker-compose-phpmyadmin.yml

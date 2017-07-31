@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  mysql:
+    image: mysql:5.7   
+    
+  phpmyadmin:
+    environment:
+      PMA_HOST: mysql
+    image: phpmyadmin/phpmyadmin
+    links:
+    - mysql
+    ports:
+    - 3000:80

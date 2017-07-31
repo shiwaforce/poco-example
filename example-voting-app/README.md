@@ -37,7 +37,7 @@ Quick start
     javaworker
     simple
 	```
-    
+     
 3. Start and stop the Docker example voting app in default mode:
 	```sh
 	$ project-compose start example-voting-app
@@ -51,6 +51,7 @@ Quick start
 	...
 	$ project-compose down example-voting-app javaworker
 	```
+
 Other examples
 ----------------
 - [example-voting-app](https://github.com/shiwaforce/project-compose-example/blob/master/example-voting-app/README.md)

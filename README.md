@@ -51,12 +51,12 @@ $ project-compose down example-voting-app javaworker
 
 Start the Docker example voting app in default mode:
 ```shell
-$ project-compose start example-voting-app default
+$ project-compose start example-voting-app 
 ```
 
 Stop the example voting app:
 ```shell
-$ project-compose down example-voting-app default
+$ project-compose down example-voting-app 
 ```
 
 More information

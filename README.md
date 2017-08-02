@@ -39,18 +39,33 @@ Quick start
 	```
 
 3. Start and stop the Docker example voting app in default mode:
-	```sh
+	```shell
 	$ project-compose start example-voting-app
-	...
+	```
+	This will download all the required Docker images and start them. The last step of the process will issue a "docker ps" command listing all the running containers.
+
+	Visit http://localhost:5000 to see the application's main page.
+
+	Since no mode was defined the application started in default mode. This means the examplevotingapp_worker container runs .Net in the worker node.
+
+	```shell
 	$ project-compose down example-voting-app
 	```
+	This stops the containers.
 
 4. Start and stop the Docker example voting app in javaworker mode:
 	```shell
 	$ project-compose start example-voting-app javaworker
-	...
+	```
+	Visit http://localhost:5000 to see the application's main page.
+
+	The application was started in javaworker mode, so the examplevotingapp_worker container contains OpenJDK 1.8 to run the worker node.
+
+	```shell
 	$ project-compose down example-voting-app javaworker
 	```
+	This stops the containers.
+
 Other examples
 ----------------
 - [example-voting-app](https://github.com/shiwaforce/project-compose-example/blob/master/example-voting-app/README.md)

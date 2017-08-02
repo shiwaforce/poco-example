@@ -16,7 +16,7 @@ Requirements
 -   Docker, version \> 17
 -   Python, version \> 2.7
 
-Quick start 
+Quick start
 ------------
 
 1. Install the latest project-compose and initialise sample catalogue:
@@ -31,20 +31,20 @@ Quick start
 	nginx
 	example-voting-app
 	mysql
-	
+
 	$ project-compose mode ls example-voting-app
     default
     javaworker
     simple
 	```
-    
+
 3. Start and stop the Docker example voting app in default mode:
 	```sh
 	$ project-compose start example-voting-app
 	...
-	$ project-compose down example-voting-app 
+	$ project-compose down example-voting-app
 	```
-    
+
 4. Start and stop the Docker example voting app in javaworker mode:
 	```shell
 	$ project-compose start example-voting-app javaworker
@@ -57,7 +57,12 @@ Other examples
 - [nginx](https://github.com/shiwaforce/project-compose-example/blob/master/nginx/README.md)
 - [mysql](https://github.com/shiwaforce/project-compose-example/blob/master/mysql/README.md)
 
-More information
------------------
-- https://github.com/shiwaforce/project-compose
-- https://www.shiwaforce.com
+License
+-------
+
+MIT
+
+Contributors
+------------
+
+ShiwaForce.com Inc.

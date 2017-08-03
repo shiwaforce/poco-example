@@ -19,6 +19,8 @@ Requirements
 Quick start
 ------------
 
+[![asciicast](https://asciinema.org/a/131956.png)](https://asciinema.org/a/131956)
+
 1. Install the latest project-compose and initialise sample catalogue:
 	```shell
 	$ pip install project-compose

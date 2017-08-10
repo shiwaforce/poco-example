@@ -20,26 +20,26 @@ Quick start
 	$ project-catalog init https://github.com/shiwaforce/project-compose-example.git
 	```
 	
-2. List all projects in the catalogue and list all available modes of the example voting app:
+2. List all projects in the catalogue and list all available plans of the example voting app:
 	```shell
 	$ project-catalog ls
 	nginx
 	example-voting-app
 	mysql
 	
-	$ project-compose mode ls mysql
+	$ project-compose plan ls mysql
 	default
 	dev/with-phpmyadmin
 	```
     
-3. Start and stop the mysql in default mode:
+3. Start and stop the mysql in default plan:
 	```sh
 	$ project-compose start mysql
 	...
 	$ project-compose down mysql
 	```
     
-4. Start and stop the mysql in dev/with-phpmyadmin mode:
+4. Start and stop the mysql in dev/with-phpmyadmin plan:
 	```shell
 	$ project-compose start mysql dev/with-phpmyadmin
 	...

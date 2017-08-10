@@ -27,20 +27,20 @@ Quick start
 	$ project-catalog init https://github.com/shiwaforce/project-compose-example.git
 	```
 
-2. List all projects in the catalogue and list all available modes of the example voting app:
+2. List all projects in the catalogue and list all available plans of the example voting app:
 	```shell
 	$ project-catalog ls
 	nginx
 	example-voting-app
 	mysql
 
-	$ project-compose mode ls example-voting-app
+	$ project-compose plan ls example-voting-app
     default
     javaworker
     simple
 	```
 
-3. Start and stop the Docker example voting app in default mode:
+3. Start and stop the Docker example voting app in default plan:
 	```shell
 	$ project-compose start example-voting-app
 	```
@@ -48,20 +48,20 @@ Quick start
 
 	Visit http://localhost:5000 to see the application's main page.
 
-	Since no mode was defined the application started in default mode. This means the examplevotingapp_worker container runs .Net in the worker node.
+	Since no plan was defined the application started in default plan. This means the examplevotingapp_worker container runs .Net in the worker node.
 
 	```shell
 	$ project-compose down example-voting-app
 	```
 	This stops the containers.
 
-4. Start and stop the Docker example voting app in javaworker mode:
+4. Start and stop the Docker example voting app in javaworker plan:
 	```shell
 	$ project-compose start example-voting-app javaworker
 	```
 	Visit http://localhost:5000 to see the application's main page.
 
-	The application was started in javaworker mode, so the examplevotingapp_worker container contains OpenJDK 1.8 to run the worker node.
+	The application was started in javaworker plan, so the examplevotingapp_worker container contains OpenJDK 1.8 to run the worker node.
 
 	```shell
 	$ project-compose down example-voting-app javaworker

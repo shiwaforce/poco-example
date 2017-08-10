@@ -25,27 +25,27 @@ Quick start
 	$ project-catalog init https://github.com/shiwaforce/project-compose-example.git
 	```
 
-2. List all projects in the catalogue and list all available modes of the example voting app:
+2. List all projects in the catalogue and list all available plans of the example voting app:
 	```shell
 	$ project-catalog ls
 	nginx
 	example-voting-app
 	mysql
 	
-	$ project-compose mode ls example-voting-app
+	$ project-compose plan ls example-voting-app
     default
     javaworker
     simple
 	```
      
-3. Start and stop the Docker example voting app in default mode:
+3. Start and stop the Docker example voting app in default plan:
 	```sh
 	$ project-compose start example-voting-app
 	...
 	$ project-compose down example-voting-app 
 	```
     
-4. Start and stop the Docker example voting app in javaworker mode:
+4. Start and stop the Docker example voting app in javaworker plan:
 	```shell
 	$ project-compose start example-voting-app javaworker
 	...

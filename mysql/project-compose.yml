@@ -1,7 +1,7 @@
-version: '2.0'
+version: '3.0'
 maintainer: "operation@shiwaforce.com"
 
-mode:
+plan:
     default:    docker-compose.yml
     dev/with-phpmyadmin:
         - docker-compose.yml

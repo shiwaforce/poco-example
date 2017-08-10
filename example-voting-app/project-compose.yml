@@ -1,4 +1,4 @@
-version: '2.0'
+version: '3.0'
 maintainer: "operation@shiwaforce.com"
 
 #before_script:
@@ -9,7 +9,7 @@ checkout:
 
 working-directory: example-voting-app
 
-mode:
+plan:
     default:    docker-compose.yml
     javaworker: docker-compose-javaworker.yml
     simple:     docker-compose-simple.yml

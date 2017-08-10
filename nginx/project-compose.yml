@@ -1,10 +1,10 @@
-version: '2.0'
+version: '3.0'
 maintainer: "operation@shiwaforce.com"
 
 environment:
   include: conf.env
   
-mode:
+plan:
   default:  docker-compose.yml
   demo/hello:  
     - docker-compose.yml

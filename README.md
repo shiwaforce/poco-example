@@ -21,10 +21,9 @@ Quick start
 
 [![asciicast](https://asciinema.org/a/131956.png)](https://asciinema.org/a/131956)
 
-1. Install the latest project-compose and initialise sample catalogue:
+1. Install the latest project-compose:
 	```shell
 	$ pip install project-compose
-	$ project-catalog init https://github.com/shiwaforce/project-compose-example.git
 	```
 
 2. List all projects in the catalogue and list all available plans of the example voting app:

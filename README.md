@@ -1,7 +1,7 @@
 About
 -----
 
-Examples for the project: https://github.com/shiwaforce/project-compose
+Examples for the project: https://github.com/shiwaforce/poco
 
 Project Compose lets you catalogue and manage your Docker projects using
 simple YAML files to shorten the route from finding your project to
@@ -21,19 +21,19 @@ Quick start
 
 [![asciicast](https://asciinema.org/a/131956.png)](https://asciinema.org/a/131956)
 
-1. Install the latest project-compose:
+1. Install the latest poco:
 	```shell
-	$ pip install project-compose
+	$ pip install poco
 	```
 
 2. List all projects in the catalogue and list all available plans of the example voting app:
 	```shell
-	$ project-catalog ls
+	$ poco catalog ls
 	nginx
 	example-voting-app
 	mysql
 
-	$ project-compose plan ls example-voting-app
+	$ poco plan ls example-voting-app
     default
     javaworker
     simple
@@ -41,7 +41,7 @@ Quick start
 
 3. Start and stop the Docker example voting app in default plan:
 	```shell
-	$ project-compose start example-voting-app
+	$ poco start example-voting-app
 	```
 	This will download all the required Docker images and start them. The last step of the process will issue a "docker ps" command listing all the running containers.
 
@@ -50,28 +50,28 @@ Quick start
 	Since no plan was defined the application started in default plan. This means the examplevotingapp_worker container runs .Net in the worker node.
 
 	```shell
-	$ project-compose down example-voting-app
+	$ poco down example-voting-app
 	```
 	This stops the containers.
 
 4. Start and stop the Docker example voting app in javaworker plan:
 	```shell
-	$ project-compose start example-voting-app javaworker
+	$ poco start example-voting-app javaworker
 	```
 	Visit http://localhost:5000 to see the application's main page.
 
 	The application was started in javaworker plan, so the examplevotingapp_worker container contains OpenJDK 1.8 to run the worker node.
 
 	```shell
-	$ project-compose down example-voting-app javaworker
+	$ poco down example-voting-app javaworker
 	```
 	This stops the containers.
 
 Other examples
 ----------------
-- [example-voting-app](https://github.com/shiwaforce/project-compose-example/blob/master/example-voting-app/README.md)
-- [nginx](https://github.com/shiwaforce/project-compose-example/blob/master/nginx/README.md)
-- [mysql](https://github.com/shiwaforce/project-compose-example/blob/master/mysql/README.md)
+- [example-voting-app](https://github.com/shiwaforce/poco-example/blob/master/example-voting-app/README.md)
+- [nginx](https://github.com/shiwaforce/poco-example/blob/master/nginx/README.md)
+- [mysql](https://github.com/shiwaforce/poco-example/blob/master/mysql/README.md)
 
 License
 -------

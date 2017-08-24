@@ -1,0 +1,14 @@
+example-voting-app:
+  file: example-voting-app/poco-compose.yml
+  git: https://github.com/shiwaforce/poco-example.git
+  repository_dir: poco-example
+
+nginx:
+  file: nginx/poco-compose.yml
+  git: https://github.com/shiwaforce/poco-example.git
+  repository_dir: poco-example
+  
+mysql:
+  file: mysql/poco-compose.yml
+  git: https://github.com/shiwaforce/poco-example.git
+  repository_dir: poco-example

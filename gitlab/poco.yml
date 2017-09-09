@@ -1,0 +1,6 @@
+version: '3.0'
+maintainer: "operation@shiwaforce.com"
+
+plan:
+  default:  docker-compose.yml
+  

@@ -1,0 +1,19 @@
+version: '2'
+services:
+  web:
+    image: 'gitlab/gitlab-ce:latest'
+    restart: always
+    hostname: 'gitlab.local'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://gitlab.local'
+        # Add any other gitlab.rb configuration here, each on its own line
+    ports:
+    - '80:80'
+    - '443:443'
+    - '22:22'
+    volumes:
+    - './mnt_gitlab/etc/gitlab:/etc/gitlab'
+    - './mnt_gitlab/var/log/gitlab:/var/log/gitlab'
+    - './mnt_gitlab/var/opt/gitlab:/var/opt/gitlab'
+

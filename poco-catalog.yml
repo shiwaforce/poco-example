@@ -3,6 +3,11 @@ example-voting-app:
   git: https://github.com/shiwaforce/poco-example.git
   repository_dir: poco-example
 
+gitlab:
+  file: gitlab/poco.yml
+  git: https://github.com/shiwaforce/poco-example.git
+  repository_dir: gitlab
+
 nginx:
   file: nginx/poco-compose.yml
   git: https://github.com/shiwaforce/poco-example.git

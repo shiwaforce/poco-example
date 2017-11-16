@@ -17,3 +17,8 @@ mysql:
   file: mysql/poco-compose.yml
   git: https://github.com/shiwaforce/poco-example.git
   repository_dir: poco-example
+
+kubernetes:
+  file: kubernetes/poco-compose.yml
+  git: https://github.com/shiwaforce/poco-example.git
+  repository_dir: poco-example

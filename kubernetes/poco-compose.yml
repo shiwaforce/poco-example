@@ -1,0 +1,17 @@
+version: '3.0'
+maintainer: "operation@shiwaforce.com"
+
+checkout: 
+  - kube https://github.com/nginxinc/kubernetes-ingress.git
+
+plan:
+  kube:
+    kubernetes-file:
+      - kube/examples/complete-example/default-server-secret.yaml
+      #- kube/examples/complete-example/nginx-ingress-rc.yaml # that's not need if you use minikube with ingress addon
+      - kube/examples/complete-example/tea-rc.yaml
+      - kube/examples/complete-example/tea-svc.yaml
+      - kube/examples/complete-example/coffee-rc.yaml
+      - kube/examples/complete-example/coffee-svc.yaml
+      - kube/examples/complete-example/cafe-secret.yaml
+      - kube/examples/complete-example/cafe-ingress.yaml

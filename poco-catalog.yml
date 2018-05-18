@@ -1,24 +1,24 @@
 example-voting-app:
-  file: example-voting-app/poco-compose.yml
-  git: https://github.com/shiwaforce/poco-example.git
-  repository_dir: poco-example
+  file: example-voting-app/proco.yml
+  git: https://github.com/shiwaforce/proco-example.git
+  repository_dir: proco-example
 
 gitlab:
-  file: gitlab/poco.yml
-  git: https://github.com/shiwaforce/poco-example.git
-  repository_dir: poco-example
+  file: gitlab/proco.yml
+  git: https://github.com/shiwaforce/proco-example.git
+  repository_dir: proco-example
 
 nginx:
-  file: nginx/poco-compose.yml
-  git: https://github.com/shiwaforce/poco-example.git
-  repository_dir: poco-example
+  file: nginx/proco.yml
+  git: https://github.com/shiwaforce/proco-example.git
+  repository_dir: proco-example
   
 mysql:
-  file: mysql/poco-compose.yml
-  git: https://github.com/shiwaforce/poco-example.git
-  repository_dir: poco-example
+  file: mysql/proco.yml
+  git: https://github.com/shiwaforce/proco-example.git
+  repository_dir: proco-example
 
 kubernetes:
-  file: kubernetes/poco-compose.yml
-  git: https://github.com/shiwaforce/poco-example.git
-  repository_dir: poco-example
+  file: kubernetes/proco.yml
+  git: https://github.com/shiwaforce/proco-example.git
+  repository_dir: proco-example

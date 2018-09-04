@@ -3,7 +3,7 @@ About
 
 Examples for the project: https://github.com/shiwaforce/poco
 
-Project Compose lets you catalogue and manage your Docker projects using
+Poco lets you catalogue and manage your Docker projects using
 simple YAML files to shorten the route from finding your project to
 initialising it in your local environment.
 

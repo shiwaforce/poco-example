@@ -1,0 +1,12 @@
+version: '3.0'
+maintainer: "operation@shiwaforce.com"
+
+checkout: 
+  - kube https://github.com/nginxinc/kubernetes-ingress.git
+
+plan:
+  kube:
+    kubernetes-file:
+      - kube/examples/complete-example/cafe.yaml
+      - kube/examples/complete-example/cafe-secret.yaml
+      - kube/examples/complete-example/cafe-ingress.yaml

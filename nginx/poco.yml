@@ -1,6 +1,9 @@
 version: '3.0'
 maintainer: "operation@shiwaforce.com"
 
+before_script:
+  - ls -l
+
 environment:
   include: conf.env
   

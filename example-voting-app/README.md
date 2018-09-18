@@ -46,9 +46,9 @@ Quick start
     
 4. Start and stop the Docker example voting app in javaworker plan:
 	```shell
-	$ poco start example-voting-app javaworker
+	$ poco start example-voting-app/javaworker
 	...
-	$ poco down example-voting-app javaworker
+	$ poco down example-voting-app/javaworker
 	```
 
 Other examples

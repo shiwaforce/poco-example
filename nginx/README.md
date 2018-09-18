@@ -26,7 +26,7 @@ Quick start
 
 2. List all projects in the catalogue and list all available plans of the example voting app:
 	```shell
-	$ poco catalog ls
+	$ poco catalog
 	default
 	demo/hello
 	```

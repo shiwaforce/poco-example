@@ -1,7 +1,7 @@
-version: '3.0'
-maintainer: "operation@shiwaforce.com"
+version: '2.0'
+maintainer: "operations@shiwaforce.com"
 
-checkout: 
+checkout:
   - kube https://github.com/nginxinc/kubernetes-ingress.git
 
 plan:

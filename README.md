@@ -1,88 +1,82 @@
 About
 -----
 
-Examples for the project: https://github.com/shiwaforce/poco
+Example projects for [Poco 1.0](https://github.com/shiwaforce/poco) — one CLI for Docker, Kubernetes and Helm.
 
-Poco lets you catalogue and manage your Docker projects using
-simple YAML files to shorten the route from finding your project to
-initialising it in your local environment.
-
-This helps you set up your local development environment and to run
-demos.
+Poco lets you catalogue and manage Docker Compose projects using simple YAML files, so you can run projects without cloning or remembering long commands.
 
 Requirements
 ------------
 
--   Docker, version \> 17
--   Python, version \> 2.7
+-   Docker 17+ (Docker Compose V2)
+-   Python 3.12.3+
+-   Poco: `pip install poco`
 
 Quick start
-------------
+-----------
 
-Note: do not clone this repository for the quick start. Poco will do it for you in step 2.
+Note: do not clone this repository for the quick start. Poco fetches the catalog for you.
 
-1. Install the latest poco:
+1. Install poco:
 	```shell
-	$ pip install poco
+	pip install poco
 	```
 
-2. Add the [catalog](./poco-catalog.yml) to poco:
+2. Add the catalog:
 	```shell
-	$ poco repo add catalog-example git@github.com:shiwaforce/poco-example.git
+	poco repo add poco-examples https://github.com/shiwaforce/poco-example.git
 	```
 
-3. List all projects in the catalogue and list all available plans of the example voting app:
+3. List projects and plans:
 	```shell
-	$ poco catalog
-	-------------------
+	poco catalog
+	```
+
+	Output:
+	```
 	Available projects:
 	-------------------
 	nginx
 	example-voting-app
 	mysql
-
-	$ poco plan ls example-voting-app
-	---------------------------------------------------------------
-	Available plans for project: example-voting-app
-	---------------------------------------------------------------
-	default
-	javaworker
-	simple
+	kubernetes
+	gitlab
 	```
-
-4. Start and stop the Docker example voting app with the **default** plan:
-	```shell
-	$ poco start example-voting-app
-	```
-	This will download and build all the required Docker images and start them. The last step of the process will issue a "docker ps" command listing all the running containers.
-
-	Visit http://localhost:5000 to see the application's main page.
-
-	Since no plan was defined the application started with the default plan. This means the example-voting-app_worker_1 container runs .Net in the worker node.
 
 	```shell
-	$ poco down example-voting-app
+	poco plan ls example-voting-app
 	```
-	This stops the containers.
 
-5. Start and stop the Docker example voting app with the **javaworker** plan:
+4. Start the example voting app (default plan):
 	```shell
-	$ poco start example-voting-app/javaworker
+	poco up example-voting-app
 	```
-	Visit http://localhost:5000 to see the application's main page.
 
-	The application was started in javaworker plan, so the example-voting-app_worker_1 container contains OpenJDK 1.8 to run the worker node.
-
+	Visit http://localhost:5000. Stop with:
 	```shell
-	$ poco down example-voting-app/javaworker
+	poco down example-voting-app
 	```
-	This stops the containers.
+
+5. Start with a different plan (javaworker):
+	```shell
+	poco up example-voting-app/javaworker
+	poco down example-voting-app/javaworker
+	```
 
 Other examples
-----------------
-- [example-voting-app](https://github.com/shiwaforce/poco-example/blob/master/example-voting-app/README.md)
-- [nginx](https://github.com/shiwaforce/poco-example/blob/master/nginx/README.md)
-- [mysql](https://github.com/shiwaforce/poco-example/blob/master/mysql/README.md)
+--------------
+
+- [example-voting-app](example-voting-app/README.md)
+- [nginx](nginx/README.md)
+- [mysql](mysql/README.md)
+- [kubernetes](kubernetes/) — Kubernetes Ingress example
+- [gitlab](gitlab/) — GitLab Runner example
+
+Links
+-----
+
+- [getpoco.io](https://getpoco.io) — Documentation
+- [Poco on GitHub](https://github.com/shiwaforce/poco)
 
 License
 -------

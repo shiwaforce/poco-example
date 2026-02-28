@@ -1,14 +1,17 @@
-version: '3.0'
-maintainer: "operation@shiwaforce.com"
+version: '2.0'
+maintainer: "operations@shiwaforce.com"
 
 before_script:
   - ls -l
 
 environment:
   include: conf.env
-  
+
 plan:
-  default:  docker-compose.yml
-  demo/hello:  
-    - docker-compose.yml
-    - docker-compose-hello.yml
+  default:
+    docker-compose-file:
+      - docker-compose.yml
+  demo/hello:
+    docker-compose-file:
+      - docker-compose.yml
+      - docker-compose-hello.yml

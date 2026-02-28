@@ -1,15 +1,18 @@
-version: '3.0'
-maintainer: "operation@shiwaforce.com"
-
-#before_script:
-#    - ls -l
+version: '2.0'
+maintainer: "operations@shiwaforce.com"
 
 checkout:
-    - . https://github.com/docker/example-voting-app.git
+  - . https://github.com/docker/example-voting-app.git
 
 working-directory: example-voting-app
 
 plan:
-    default:    docker-compose.yml
-    javaworker: docker-compose-javaworker.yml
-    simple:     docker-compose-simple.yml
+  default:
+    docker-compose-file:
+      - docker-compose.yml
+  javaworker:
+    docker-compose-file:
+      - docker-compose-javaworker.yml
+  simple:
+    docker-compose-file:
+      - docker-compose-simple.yml

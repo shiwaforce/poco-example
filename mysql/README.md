@@ -1,56 +1,43 @@
 About
 -----
 
-Examples for the project: https://github.com/shiwaforce/poco
-
-Project Compose lets you catalogue and manage your Docker projects using simple YAML files to shorten the route from finding your project to initialising it in your local environment.
-
-This helps you set up your local development environment and to run demos.
+MySQL example for [Poco](https://github.com/shiwaforce/poco). Add the poco-example catalog first (`poco repo add poco-examples https://github.com/shiwaforce/poco-example.git`).
 
 Requirements
 ------------
--   Docker, version \> 17
--   Python, version \> 2.7
 
-Quick start 
-------------
-1. Install the latest poco:
+-   Docker 17+ (Docker Compose V2)
+-   Python 3.12.3+
+-   Poco: `pip install poco`
+
+Quick start
+-----------
+
+1. Add catalog and list plans:
 	```shell
-	$ pip install poco
+	poco repo add poco-examples https://github.com/shiwaforce/poco-example.git
+	poco plan ls mysql
 	```
-	
-2. List all projects in the catalogue and list all available plans of the example voting app:
+
+2. Start and stop (default plan):
 	```shell
-	$ poco catalog
-	nginx
-	example-voting-app
-	mysql
-	
-	$ poco plan ls mysql
-	default
-	dev/with-phpmyadmin
+	poco up mysql
+	poco down mysql
 	```
-    
-3. Start and stop the mysql in default plan:
-	```sh
-	$ poco start mysql
-	...
-	$ poco down mysql
-	```
-    
-4. Start and stop the mysql in dev/with-phpmyadmin plan:
+
+3. Start with phpMyAdmin (dev/with-phpmyadmin plan):
 	```shell
-	$ poco start mysql dev/with-phpmyadmin
-	...
-	$ poco down mysql dev/with-phpmyadmin
+	poco up mysql/dev/with-phpmyadmin
+	poco down mysql/dev/with-phpmyadmin
 	```
 Other examples
-----------------
+--------------
+
 - [example-voting-app](https://github.com/shiwaforce/poco-example/blob/master/example-voting-app/README.md)
 - [nginx](https://github.com/shiwaforce/poco-example/blob/master/nginx/README.md)
-- [mysql](https://github.com/shiwaforce/poco-example/blob/master/mysql/README.md)
 
 More information
------------------
-- https://github.com/shiwaforce/poco
-- https://www.shiwaforce.com
+----------------
+
+- [getpoco.io](https://getpoco.io)
+- [Poco on GitHub](https://github.com/shiwaforce/poco)

@@ -13,8 +13,9 @@ demos.
 Requirements
 ------------
 
--   Docker, version \> 17
--   Python, version \> 2.7
+-   Docker 17+ (Docker Compose V2)
+-   Python 3.12.3+
+-   Poco: `pip install poco`
 
 Quick start 
 ------------
@@ -39,25 +40,26 @@ Quick start
      
 3. Start and stop the Docker example voting app in default plan:
 	```sh
-	$ poco start example-voting-app
+	$ poco up example-voting-app
 	...
 	$ poco down example-voting-app 
 	```
     
-4. Start and stop the Docker example voting app in javaworker plan:
+4. Start and stop with javaworker plan:
 	```shell
-	$ poco start example-voting-app/javaworker
+	$ poco up example-voting-app/javaworker
 	...
 	$ poco down example-voting-app/javaworker
 	```
 
 Other examples
-----------------
-- [example-voting-app](https://github.com/shiwaforce/poco-example/blob/master/example-voting-app/README.md)
+--------------
+
 - [nginx](https://github.com/shiwaforce/poco-example/blob/master/nginx/README.md)
 - [mysql](https://github.com/shiwaforce/poco-example/blob/master/mysql/README.md)
 
 More information
------------------
-- https://github.com/shiwaforce/poco
-- https://www.shiwaforce.com
+----------------
+
+- [getpoco.io](https://getpoco.io)
+- [Poco on GitHub](https://github.com/shiwaforce/poco)

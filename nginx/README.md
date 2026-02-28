@@ -1,56 +1,43 @@
 About
 -----
 
-Examples for the project: https://github.com/shiwaforce/poco
-
-Poco lets you catalogue and manage your Docker projects using
-simple YAML files to shorten the route from finding your project to
-initialising it in your local environment.
-
-This helps you set up your local development environment and to run
-demos.
+Nginx example for [Poco](https://github.com/shiwaforce/poco). Add the poco-example catalog first (`poco repo add poco-examples https://github.com/shiwaforce/poco-example.git`).
 
 Requirements
 ------------
 
--   Docker, version \> 17
--   Python, version \> 2.7
+-   Docker 17+ (Docker Compose V2)
+-   Python 3.12.3+
+-   Poco: `pip install poco`
 
-Quick start 
-------------
+Quick start
+-----------
 
-1. Install the latest poco:
+1. Add catalog and list plans:
 	```shell
-	$ pip install poco
+	poco repo add poco-examples https://github.com/shiwaforce/poco-example.git
+	poco plan ls nginx
 	```
 
-2. List all projects in the catalogue and list all available plans of the example voting app:
+2. Start and stop (default plan):
 	```shell
-	$ poco catalog
-	default
-	demo/hello
+	poco up nginx
+	poco down nginx
 	```
-    
-3. Start and stop the Docker example voting app in default plan:
-	```sh
-	$ poco start nginx
-	...
-	$ poco down nginx
-	```
-    
-4. Start and stop the Docker example voting app in javaworker plan:
+
+3. Start with demo/hello plan:
 	```shell
-	$ poco start nginx demo/hello
-	...
-	$ poco down nginx demo/hello
+	poco up nginx/demo/hello
+	poco down nginx/demo/hello
 	```
 Other examples
-----------------
+--------------
+
 - [example-voting-app](https://github.com/shiwaforce/poco-example/blob/master/example-voting-app/README.md)
-- [nginx](https://github.com/shiwaforce/poco-example/blob/master/nginx/README.md)
 - [mysql](https://github.com/shiwaforce/poco-example/blob/master/mysql/README.md)
 
 More information
------------------
-- https://github.com/shiwaforce/poco
-- https://www.shiwaforce.com
+----------------
+
+- [getpoco.io](https://getpoco.io)
+- [Poco on GitHub](https://github.com/shiwaforce/poco)

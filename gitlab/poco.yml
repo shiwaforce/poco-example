@@ -1,6 +1,8 @@
-version: '3.0'
-maintainer: "operation@shiwaforce.com"
+version: '2.0'
+maintainer: "operations@shiwaforce.com"
 
 plan:
-  default:  docker-compose.yml
+  default:
+    docker-compose-file:
+      - docker-compose.yml
   
